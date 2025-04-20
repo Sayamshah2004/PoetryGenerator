@@ -1,0 +1,134 @@
+@import url("https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", sans-serif;
+  color: #333;
+  padding: 20px;
+  animation: backgroundChange 10s infinite alternate;
+}
+
+@keyframes backgroundChange {
+  0% {
+    background: #f6d365; /* light yellow */
+  }
+  25% {
+    background: #fda085; /* light pink */
+  }
+  50% {
+    background: #a1c4fd; /* light blue */
+  }
+  75% {
+    background: #c2e9fb; /* light teal */
+  }
+  100% {
+    background: #f6d365; /* back to light yellow */
+  }
+}
+
+.container {
+  max-width: 600px;
+  margin: auto;
+  background: #fff;
+  padding: 25px;
+  border-radius: 1em;
+  border: 0.3em solid rgb(250, 241, 241);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+h1 {
+  margin-bottom: 20px;
+  color: #333;
+  font-family: "caveat";
+  letter-spacing: 0.2em;
+  animation: wave 2s ease-in-out infinite;
+}
+
+@keyframes wave {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+select,
+button {
+  padding: 10px;
+  margin: 10px 5px;
+  border-radius: 8px;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+select {
+  background: #f0f0f0;
+  width: 80%;
+}
+
+button {
+  background-color: #007bff;
+  color: white;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+#poem-box {
+  margin-top: 20px;
+  font-size: 18px;
+  line-height: 1.6;
+  font-family: "Courier New";
+  font-weight: 900;
+  white-space: pre-wrap;
+  background: #f9f9f9;
+  padding: 15px;
+  border-radius: 10px;
+  min-height: 100px;
+  color: #333;
+}
+
+.controls {
+  margin-top: 20px;
+}
+
+button {
+  background-color: #007bff;
+  color: white;
+  padding: 10px;
+  margin: 5px;
+  cursor: pointer;
+  border-radius: 5px;
+  border: none;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+@media (max-width: 600px) {
+  .container {
+    padding: 20px 15px;
+  }
+
+  select,
+  button {
+    width: 100%;
+    margin: 8px 0;
+  }
+
+  #poem-box {
+    font-size: 16px;
+  }
+}

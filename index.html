@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Poetry Generator</title>
+
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Poetry Generator🌸</h1>
+
+      <select id="mood-select">
+        <option value="happy">Happy</option>
+        <option value="sad">Sad</option>
+        <option value="motivational">Motivational</option>
+        <option value="relaxed">Relaxed</option>
+      </select>
+
+      <select id="theme-select">
+        <option value="nature">Nature</option>
+        <option value="love">Love</option>
+        <option value="sad">Sad</option>
+        <option value="inspiration">Inspiration</option>
+      </select>
+
+      <button onclick="generatePoem()">Generate Poem</button>
+
+      <div id="poem-box"></div>
+
+      <div class="controls">
+        <button onclick="readPoem()">🔊 Listen</button>
+        <button onclick="copyPoem()">📋 Copy</button>
+        <button onclick="savePoem()">💾 Save</button>
+        <button onclick="sharePoem()">📤 Share</button>
+      </div>
+
+      <audio id="bg-music" loop>
+        <source src="background-music.mp3" type="audio/mp3" />
+      </audio>
+    </div>
+
+    <script src="index.js"></script>
+  </body>
+</html>
